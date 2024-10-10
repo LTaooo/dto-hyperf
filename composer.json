@@ -1,0 +1,32 @@
+{
+    "name": "ltaooo/dto-hyperf",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Ltaooo\\DtoHyperf\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "liutao",
+            "email": "email.lt@qq.com"
+        }
+    ],
+    "require": {
+        "hyperf/contract": "^3.0",
+        "hyperf/stringable": "^3.0",
+        "hyperf/context": "^3.0",
+        "hyperf/http-server": "^3.0",
+        "hyperf/validation": "^3.0",
+        "ltaooo/data": "^1.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.35",
+        "mockery/mockery": "^1.6"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
