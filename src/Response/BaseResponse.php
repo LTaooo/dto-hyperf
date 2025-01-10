@@ -26,14 +26,6 @@ class BaseResponse extends Data
         return PageResponse::pageCollect($paginator, static::class);
     }
 
-    public function fill(array $data): static
-    {
-        $this->beforeFill($data);
-        parent::fill($data);
-        $this->afterFill($data);
-        return $this;
-    }
-
     public static function from($data): static
     {
         return parent::from($data);

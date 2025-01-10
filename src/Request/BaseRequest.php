@@ -22,7 +22,7 @@ class BaseRequest extends Data
     public static function fromRequest(array|RequestInterface $request): static
     {
         $instance = new static();
-        $result = $instance->validate($request instanceof RequestInterface ? $request->all() : $request);
+        $result = $instance->validate($request instanceof RequestInterface ? array_merge($request->all(), $request->getUploadedFiles()) : $request);
         $instance->fill($result);
         return $instance;
     }
